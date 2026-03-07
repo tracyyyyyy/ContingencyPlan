@@ -1,0 +1,60 @@
+{
+  "plan": "Station on Fire",
+  "critical_steps": [
+    {
+      "id": 1,
+      "task": "Check with TC to ensure the alarm is sent to Chubb, summon FSD if needed.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 2,
+      "task": "Check the status of Fire Protection System and trigger the fire alarm bells/siren if necessary.",
+      "responsible": ["SC", "assigned staff"]
+    },
+    {
+      "id": 3,
+      "task": "Ascertain the location of smoke/fire.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 4,
+      "task": "If smoke or fire is observed in the public area, arrange to prevent passengers' access to the affected area.",
+      "responsible": ["assigned staff"]
+    },
+    {
+      "id": 5,
+      "task": "Monitor ECS operation.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 6,
+      "task": "Activate the Station Evacuation Mode if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 7,
+      "task": "Incident Information Dissemination.",
+      "responsible": ["SC", "assigned staff"]
+    },
+    {
+      "id": 8,
+      "task": "Arrange with TC for trains non-stopping.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 9,
+      "task": "Arrange with TC for empty trains to evacuate passengers in case the evacuation path is affected by smoke/fire.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 10,
+      "task": "Station Close & stoppage of incoming passengers.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 11,
+      "task": "Set up the Incident Control Post (ICP) at a proper location.",
+      "responsible": ["SC", "assigned staff"]
+    }
+  ]
+}

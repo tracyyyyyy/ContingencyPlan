@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1060220849040",
+    "project_id": "contingencyplan-idt",
+    "storage_bucket": "contingencyplan-idt.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060220849040:android:caacd3cbfec91493084115",
+        "android_client_info": {
+          "package_name": "com.example.contingencyplan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEyXB7f3CRAH4BJz0-Dhro5H8RxAuZF3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
