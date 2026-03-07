@@ -1,15 +1,15 @@
 package com.example.contingencyplan
-
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import com.example.contingencyplan.ui.theme.ContingencyPlanTheme
 import com.google.gson.Gson
 import com.google.firebase.FirebaseApp
@@ -70,11 +70,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 @Composable
 fun MainScreen(onScenarioSelected: (Scenario) -> Unit) {
     val scenarios = listOf(
-        // A Emergency evacuation
         Scenario("A1 Station on Fire (TH)", "a1_station_on_fire.json"),
         Scenario("A2 Station on Fire (NTH)", "a2_station_on_fire.json"),
         Scenario("A3 Train on Fire at Platform", "a3_train_on_fire_platform.json"),
@@ -82,21 +80,15 @@ fun MainScreen(onScenarioSelected: (Scenario) -> Unit) {
         Scenario("A5 CBRN", "a5_cbrn.json"),
         Scenario("A6 Bomb Threat", "a6_bomb_threat.json"),
         Scenario("A7 SCR Evacuation", "a7_scr_evacuation.json"),
-
-        // B Non-emergency evacuation
         Scenario("B1 Train Service Suspension", "b1_train_service_suspension.json"),
         Scenario("B2 Train-to-Track Derailment", "b2_train_derailment.json"),
         Scenario("B3 Total Power Supply Failure", "b3_total_power_failure.json"),
         Scenario("B4 Partial Power Supply Failure", "b4_partial_power_failure.json"),
-
-        // C Equipment failure & incident
         Scenario("C1 Person Under Train", "c1_person_under_train.json"),
         Scenario("C2 MTR Shuttle Bus Operation", "c2_shuttle_bus.json"),
         Scenario("C3 OCC Evacuation", "c3_occ_evacuation.json"),
         Scenario("C4 Point Failure", "c4_point_failure.json"),
         Scenario("C5 Bi-directional Operation", "c5_bi_directional.json"),
-
-        // D Crowd management
         Scenario("D1 Integrated Crowd Management Plan A", "d1_crowd_plan_a.json"),
         Scenario("D2 Integrated Crowd Management Plan B", "d2_crowd_plan_b.json"),
         Scenario("D3 Station Crowd Control", "d3_station_crowd_control.json"),
@@ -114,52 +106,75 @@ fun MainScreen(onScenarioSelected: (Scenario) -> Unit) {
         Text("Select Scenario", style = MaterialTheme.typography.titleLarge)
 
         LazyColumn {
-            // Group A
-            item { Text("A Emergency evacuation", style = MaterialTheme.typography.titleMedium) }
-            items(scenarios.filter { it.title.startsWith("A") }) { scenario ->
-                Card(
-                    onClick = { onScenarioSelected(scenario) },
-                    modifier = Modifier.fillMaxWidth().padding(8.dp)
-                ) {
-                    Text(scenario.title, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(16.dp))
-                }
+            item {
+                ExpandableScenarioSection(
+                    title = "A Emergency evacuation",
+                    scenarios = scenarios.filter { it.title.startsWith("A") },
+                    onScenarioSelected = onScenarioSelected
+                )
             }
-
-            // Group B
-            item { Text("B Non-emergency evacuation", style = MaterialTheme.typography.titleMedium) }
-            items(scenarios.filter { it.title.startsWith("B") }) { scenario ->
-                Card(
-                    onClick = { onScenarioSelected(scenario) },
-                    modifier = Modifier.fillMaxWidth().padding(8.dp)
-                ) {
-                    Text(scenario.title, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(16.dp))
-                }
+            item {
+                ExpandableScenarioSection(
+                    title = "B Non-emergency evacuation",
+                    scenarios = scenarios.filter { it.title.startsWith("B") },
+                    onScenarioSelected = onScenarioSelected
+                )
             }
-
-            // Group C
-            item { Text("C Equipment failure & incident", style = MaterialTheme.typography.titleMedium) }
-            items(scenarios.filter { it.title.startsWith("C") }) { scenario ->
-                Card(
-                    onClick = { onScenarioSelected(scenario) },
-                    modifier = Modifier.fillMaxWidth().padding(8.dp)
-                ) {
-                    Text(scenario.title, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(16.dp))
-                }
+            item {
+                ExpandableScenarioSection(
+                    title = "C Equipment failure & incident",
+                    scenarios = scenarios.filter { it.title.startsWith("C") },
+                    onScenarioSelected = onScenarioSelected
+                )
             }
+            item {
+                ExpandableScenarioSection(
+                    title = "D Crowd management",
+                    scenarios = scenarios.filter { it.title.startsWith("D") },
+                    onScenarioSelected = onScenarioSelected
+                )
+            }
+        }
+    }
+}
 
-            // Group D
-            item { Text("D Crowd management", style = MaterialTheme.typography.titleMedium) }
-            items(scenarios.filter { it.title.startsWith("D") }) { scenario ->
+@Composable
+fun ExpandableScenarioSection(
+    title: String,
+    scenarios: List<Scenario>,
+    onScenarioSelected: (Scenario) -> Unit
+) {
+    var expanded by remember { mutableStateOf(false) }
+
+    Column(modifier = Modifier.fillMaxWidth().padding(8.dp)) {
+        // Section Header (可按下展開/收起)
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleMedium,
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { expanded = !expanded }
+                .padding(12.dp)
+        )
+
+        // 展開時顯示清單
+        if (expanded) {
+            scenarios.forEach { scenario ->
                 Card(
                     onClick = { onScenarioSelected(scenario) },
-                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                    modifier = Modifier.fillMaxWidth().padding(4.dp)
                 ) {
-                    Text(scenario.title, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(16.dp))
+                    Text(
+                        text = scenario.title,
+                        style = MaterialTheme.typography.bodyLarge,
+                        modifier = Modifier.padding(12.dp)
+                    )
                 }
             }
         }
     }
 }
+
 
 @Composable
 fun CriticalStepsScreen(plan: ContingencyPlan, onBack: () -> Unit) {
@@ -290,36 +305,3 @@ fun uploadToFirebase(
         onFailure(e)
     }
 }
-
-@Composable
-fun MergedRecordsScreen(plan: ContingencyPlan, docs: List<DocumentSnapshot>) {
-    val allChecked = remember {
-        mutableSetOf<String>().apply {
-            docs.forEach { doc ->
-                val records = doc.get("records") as? Map<String, String> ?: emptyMap()
-                addAll(records.keys)
-            }
-        }
-    }
-
-    val unchecked = plan.critical_steps.filter { step ->
-        !allChecked.contains(step.id.toString())
-    }
-
-    Column(modifier = Modifier.padding(16.dp)) {
-        Text("Merged Records for ${plan.plan}", style = MaterialTheme.typography.titleLarge)
-
-        Spacer(modifier = Modifier.height(12.dp))
-        Text("✅ Checked Items:", style = MaterialTheme.typography.titleMedium)
-        allChecked.forEach { id ->
-            Text("Step $id")
-        }
-
-        Spacer(modifier = Modifier.height(12.dp))
-        Text("❌ Unchecked Items:", style = MaterialTheme.typography.titleMedium)
-        unchecked.forEach { step ->
-            Text("${step.id}. ${step.task}")
-        }
-    }
-}
-

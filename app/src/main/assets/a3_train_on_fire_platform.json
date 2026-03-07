@@ -1,0 +1,235 @@
+{
+  "plan": "A3 Train on Fire at Platform",
+  "critical_steps": [
+    {
+      "id": 1,
+      "task": "Confirm incident location (with TC if appropriate). If TC instructs, Station Evacuation may be triggered before arrival of the incident train.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 2,
+      "task": "Arrange to use a portable fire extinguisher to put out the fire if safe to do so.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 3,
+      "task": "Check the status of Fire Protection System and trigger the fire alarm bells/siren if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 4,
+      "task": "Ensure the fire pump has started automatically or arrange a manual start if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 5,
+      "task": "Locate the incident location and observe the platform condition via CCTV.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 6,
+      "task": "Arrange Station Staff escorting FSD officials with cue card within 6 mins.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 7,
+      "task": "Inform all staff members to switch HPR to line mode.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 8,
+      "task": "Conduct detrainment and open all Platform Doors after confirming with TC.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 9,
+      "task": "Activate proper smoke extraction/emergency ventilation mode after communication with ESC (Fire in tunnel).",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 10,
+      "task": "Activate Station Evacuation if required, and request Emergency Services through TC if necessary. Confirm train service pattern, interchange arrangement and Platform arrangement with TC.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 11,
+      "task": "Provide or arrange assistance to disabled persons, elderly, or passengers in need.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 12,
+      "task": "Warn other persons to keep away from the incident site.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 13,
+      "task": "Arrange to use a portable fire extinguisher to put out the fire if safe to do so.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 14,
+      "task": "Operate ESS/PEP to prevent train operation in Auto/CM mode if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 15,
+      "task": "Switch off air-conditioning inside SCR to avoid infiltration of smoke, if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 16,
+      "task": "Summon assistance from FMD, CSRPU via TC or request manpower backup.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 17,
+      "task": "Arrange staff to manually switch off/close the Town Gas/LPG supply, if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 18,
+      "task": "Inform TC for any station equipment damage.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 19,
+      "task": "Put on escape hood if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 20,
+      "task": "Confirm the activation of Station Evacuation Mode on IBP/SMS/MCS/DIBP/ILCP.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 21,
+      "task": "Deploy staff(s) to carry out the evacuation according to the contingency plan. Assign Casualty Liaison Officer if multiple injuries are found.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 22,
+      "task": "Open Manual Service Gates/Emergency Service Gate/Emergency Escape Gates/Emergency Exit Gates/Emergency Exit Door to accelerate evacuation process.",
+      "responsible": ["Conc", "PSB"]
+    },
+    {
+      "id": 23,
+      "task": "Change running direction of Escalators/Travelators, or stop them as fixed staircases (Emergency Brake MUST be applied).",
+      "responsible": ["Conc", "PSB", "CuC"]
+    },
+    {
+      "id": 24,
+      "task": "Identify passengers who may have difficulties in evacuation and provide assistance.",
+      "responsible": ["Conc", "CuC"]
+    },
+    {
+      "id": 25,
+      "task": "Ensure all lifts are stopped at the unaffected landing with nobody trapped.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 26,
+      "task": "Direct passengers to leave the station.",
+      "responsible": ["Conc", "PSB"]
+    },
+    {
+      "id": 27,
+      "task": "Cordon off the incident site.",
+      "responsible": ["RS"]
+    },
+    {
+      "id": 28,
+      "task": "Inform working parties and staff at Back of House area for emergency evacuation, then report at designated assembly point.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 29,
+      "task": "Inform all tenants to evacuate and report at designated assembly point.",
+      "responsible": ["Conc", "PSB"]
+    },
+    {
+      "id": 30,
+      "task": "Inform the annexed Buildings' Management Offices.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 36,
+      "task": "Crosscheck station equipment for evacuation readiness: PIDS, PA, AFC Gates, Emergency Signage.",
+      "responsible": ["RS"]
+    },
+    {
+      "id": 37,
+      "task": "Crosscheck with ESC to make sure proper ECS Mode has been operated.",
+      "responsible": ["RS"]
+    },
+    {
+      "id": 38,
+      "task": "Crosscheck Escalators/Travelators are running in proper direction according to contingency plan.",
+      "responsible": ["RS"]
+    },
+    {
+      "id": 39,
+      "task": "Crosscheck Manual Service Gates/Emergency Service Gate/Emergency Escape Gates/Emergency Exit Door are opened.",
+      "responsible": ["RS"]
+    },
+    {
+      "id": 40,
+      "task": "Check if Platform, Concourse, Subway are cleared of passengers and report result.",
+      "responsible": ["Conc"]
+    },
+    {
+      "id": 41,
+      "task": "Close all entrances/subways to prevent inflow of passengers after evacuation and post Station Close notices.",
+      "responsible": ["Conc", "PSB", "CuC"]
+    },
+    {
+      "id": 42,
+      "task": "Report to SC/IO after confirming entrances are closed.",
+      "responsible": ["Conc", "CuC"]
+    },
+    {
+      "id": 43,
+      "task": "Set up Incident Control Post at proper location.",
+      "responsible": ["Conc"]
+    },
+    {
+      "id": 44,
+      "task": "Take up IO duty before DSM arrival.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 45,
+      "task": "Appoint an IOA.",
+      "responsible": ["Conc"]
+    },
+    {
+      "id": 46,
+      "task": "Set up a temporary telephone line at the ICP.",
+      "responsible": ["FMD"]
+    },
+    {
+      "id": 47,
+      "task": "Deploy staff to escort emergency services to the incident site.",
+      "responsible": ["CuC"]
+    },
+    {
+      "id": 48,
+      "task": "Set up the access route.",
+      "responsible": ["CuC"]
+    },
+    {
+      "id": 49,
+      "task": "Set up the egress route.",
+      "responsible": ["CuC"]
+    },
+    {
+      "id": 50,
+      "task": "Head-count personnel of tenants and working parties at assembly point and report to IO.",
+      "responsible": ["CuC"]
+    },
+    {
+      "id": 51,
+      "task": "Operate ECS Mode after evacuation to drain away smoke if platform doors are installed.",
+      "responsible": ["SC"]
+    }
+  ]
+}

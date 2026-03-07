@@ -1,0 +1,135 @@
+{
+  "plan": "A2 Station on Fire (NTH)",
+  "critical_steps": [
+    {
+      "id": 1,
+      "task": "Confirm the genuineness of the fire and ascertain the location of smoke/fire.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 2,
+      "task": "Activate the Fire Protection System and trigger the fire alarm bells/siren if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 3,
+      "task": "Try to use a Portable Fire Extinguisher (PFE) to put out the fire if safe to do so.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 4,
+      "task": "Put on the Escape Hood if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 5,
+      "task": "Ensure the fire pump has started automatically and arrange for a manual start if required.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 6,
+      "task": "Activate Station Evacuation Mode on IBP/SMS/MCS/DIBP/ILCP if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 7,
+      "task": "Inform TC of incident details: site, casualties, equipment damage, emergency service needs, evacuation arrangement, assembly point.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 8,
+      "task": "Arrange Station Staff escorting FSD officials with cue card within 6 mins.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 9,
+      "task": "Inform all staff members to switch HPR to line mode.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 10,
+      "task": "Summon assistance from FMD.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 11,
+      "task": "Activate proper smoke extraction/emergency ventilation mode after communication with ESC.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 12,
+      "task": "Switch off air-conditioning inside SCR to avoid infiltration of smoke, if necessary.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 13,
+      "task": "Arrange staff to manually switch off/close the Town Gas/LPG supply, if necessary.",
+      "responsible": ["NA"]
+    },
+    {
+      "id": 14,
+      "task": "Inform all working parties including Back of House areas for emergency evacuation.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 15,
+      "task": "Inform the annexed Buildings' Management Offices of the incident.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 16,
+      "task": "Open Manual Service Gates/Emergency Service Gate/Emergency Escape Gates/Emergency Exit Gates/Emergency Exit Door to accelerate evacuation process.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 17,
+      "task": "Open designated entrance/night access door or alternative entrance/night access door. Evacuation via track if no entrance available.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 18,
+      "task": "Inform all working parties to evacuate to the designated assembly point.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 19,
+      "task": "Crosscheck station equipment for evacuation readiness: PA, AFC Gates, Emergency Signage, PIDS.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 20,
+      "task": "Crosscheck with ESC to make sure proper ECS Mode has been operated.",
+      "responsible": ["RS"]
+    },
+    {
+      "id": 21,
+      "task": "Set up Incident Control Post at proper location.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 22,
+      "task": "Take up IO duty before DSM arrival.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 23,
+      "task": "Set up a temporary telephone line at the ICP.",
+      "responsible": ["FMD"]
+    },
+    {
+      "id": 24,
+      "task": "Escort emergency services to the incident site.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 25,
+      "task": "Head-count personnel of working parties at assembly point and report to IO.",
+      "responsible": ["SC"]
+    },
+    {
+      "id": 26,
+      "task": "Operate ECS Mode after evacuation to drain away smoke if platform doors are installed.",
+      "responsible": ["SC"]
+    }
+  ]
+}
