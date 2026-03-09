@@ -1,0 +1,11 @@
+{
+  "title": "Police",
+  "fields": [
+    "事件時間",
+    "警察到場時間",
+    "警察離場時間",
+    "PC number",
+    "案件種類",
+    "RN number"
+  ]
+}

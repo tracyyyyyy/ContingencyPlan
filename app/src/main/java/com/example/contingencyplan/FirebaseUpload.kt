@@ -4,6 +4,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
 import java.util.*
 
+// Existing function for Contingency Plans
 fun uploadToFirebase(
     planName: String,
     records: Map<Int, Long>,
@@ -36,4 +37,28 @@ fun uploadToFirebase(
     } catch (e: Exception) {
         onFailure(e)
     }
+}
+
+// New function for Cue Cards / Incidents
+fun uploadIncidentToFirebase(
+    type: String,
+    fields: Map<String, String>,
+    onSuccess: () -> Unit = {},
+    onFailure: (Exception) -> Unit = {}
+) {
+    val db = FirebaseFirestore.getInstance()
+    val dateOnlyFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+    val docId = "${dateOnlyFormat.format(Date())}_${type.replace("[^A-Za-z0-9_]".toRegex(), "_").lowercase()}"
+
+    val data = mapOf(
+        "type" to type,
+        "fields" to fields,
+        "uploadedAt" to com.google.firebase.Timestamp.now()
+    )
+
+    db.collection("incidents")
+        .document(docId)
+        .set(data)   // one record per day/type
+        .addOnSuccessListener { onSuccess() }
+        .addOnFailureListener { e -> onFailure(e) }
 }
